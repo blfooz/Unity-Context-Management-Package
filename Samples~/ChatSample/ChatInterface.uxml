@@ -1,0 +1,13 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="" style="flex-grow: 1; background-color: rgba(51, 51, 51, 0.76); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);">
+        <ui:ListView virtualization-method="DynamicHeight" name="bubbles" binding-source-selection-mode="AutoAssign" item-template="project://database/Packages/com.blfooz.contextmanagement/Samples~/ChatSample/MessageBubble.uxml?fileID=9197481963319205126&amp;guid=b40e4cfda1c2600469724167cb11a704&amp;type=3#MessageBubble" selection-type="None" style="flex-grow: 1;"/>
+        <ui:VisualElement style="flex-grow: 0; flex-direction: row; flex-shrink: 0;">
+            <ui:TextField name="input" value="" style="font-size: 40px; flex-grow: 1; height: 80px; flex-shrink: 1; white-space: normal;">
+                <Bindings>
+                    <ui:DataBinding property="value" data-source-path="input" binding-mode="TwoWay"/>
+                </Bindings>
+            </ui:TextField>
+            <ui:Button text="&gt;" name="sendButton" style="aspect-ratio: 1;"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

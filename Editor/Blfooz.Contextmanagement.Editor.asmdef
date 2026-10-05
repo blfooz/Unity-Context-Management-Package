@@ -1,0 +1,10 @@
+{
+    "name": "Blfooz.Contextmanagement.Editor",
+    "references": [
+      "Blfooz.Contextmanagement"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

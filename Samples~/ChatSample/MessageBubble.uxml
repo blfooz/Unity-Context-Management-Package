@@ -1,0 +1,28 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="VisualElement" style="background-color: rgba(255, 255, 255, 0.52); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px; width: auto; align-self: flex-start; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; flex-grow: 0; flex-shrink: 0; max-width: 80%; min-width: 60%;">
+        <ui:Foldout text="Thought&#10;" value="true" style="font-size: 32px; height: initial; bottom: auto; top: auto; position: relative; flex-shrink: 0; flex-grow: 0; border-top-width: 3px; border-right-width: 3px; border-bottom-width: 3px; border-left-width: 3px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; display: flex;">
+            <ui:Label text="" style="flex-grow: 1; white-space: normal;">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="reasoningContent" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:Label>
+            <Bindings>
+                <ui:DataBinding property="style.display" data-source-path="Visible" binding-mode="ToTarget"/>
+            </Bindings>
+        </ui:Foldout>
+        <ui:Label text="Message................................................." name="message" style="font-size: 40px; white-space: normal;">
+            <Bindings>
+                <ui:DataBinding property="text" data-source-path="message" binding-mode="ToTarget"/>
+            </Bindings>
+        </ui:Label>
+        <ui:Image>
+            <Bindings>
+                <ui:DataBinding property="source" data-source-path="image" binding-mode="ToTarget"/>
+            </Bindings>
+        </ui:Image>
+        <Bindings>
+            <ui:DataBinding property="style.alignSelf" binding-mode="ToTarget" data-source-path="Alignment"/>
+            <ui:DataBinding property="style.backgroundColor" data-source-path="BubbleColor" binding-mode="ToTarget"/>
+        </Bindings>
+    </ui:VisualElement>
+</ui:UXML>

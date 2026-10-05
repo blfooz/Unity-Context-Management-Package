@@ -1,0 +1,18 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; flex-direction: column; background-color: rgba(0, 0, 0, 0); padding: 4px; margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px;">
+        <ui:VisualElement style="flex-grow: 0; flex-direction: column; margin-bottom: 6px; flex-shrink: 0;">
+            <ui:Label text="Entity Window" name="titleLabel" class="custom-label" style="font-size: 18px; -unity-font-style: bold;"/>
+        </ui:VisualElement>
+        <ui:ScrollView name="entriesScrollView" style="flex-grow: 1;">
+            <ui:VisualElement name="entries" style="flex-direction: column;"/>
+        </ui:ScrollView>
+        <ui:VisualElement style="flex-grow: 0; flex-direction: column; margin-top: 6px; padding-top: 4px; border-top-width: 1px; border-top-color: rgba(80, 80, 80, 255); padding-bottom: 20px; display: none;">
+            <ui:VisualElement style="flex-direction: row; align-items: center; flex-shrink: 0;">
+                <ui:Label name="footerInfoLabel" text="" style="font-size: 11px; color: rgba(160, 160, 160, 255);"/>
+                <ui:VisualElement style="flex-grow: 1;"/>
+                <ui:Button text="Add" name="addButton" style="height: 24px; width: 60px; margin-right: 4px;"/>
+                <ui:Button text="Clear" name="clearButton" style="height: 24px; width: 60px;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,49 @@
+{
+	"name": "com.blfooz.contextmanagement",
+	"displayName": "Context Management",
+	"version": "0.1.0",
+	"unity": "6000.4",
+	"description": "A framework for building LLM-driven Unity experiences. Manages LLM API providers, context providers, entity and message systems, tool calling, and schema-based prompt generation — designed to keep a persistent, structured world context across your game's AI agents.",
+	"keywords": [
+		"llm",
+		"ai",
+		"chatgpt",
+		"context",
+		"agents",
+		"npc",
+		"openai",
+		"deepseek",
+		"tools"
+	],
+	"dependencies": {
+		"com.unity.test-framework": "1.6.0",
+		"com.unity.nuget.newtonsoft-json": "3.2.1",
+		"com.unity.inputsystem": "1.19.0",
+		"com.unity.ugui": "2.0.0"
+	},
+	"samples": [
+		{
+			"displayName": "Chat",
+			"description": "Chat interface with streaming responses. Demonstrates ChatRequestManager, message history, and token-by-token streaming.",
+			"path": "Samples~/ChatSample"
+		},
+		{
+			"displayName": "Visual Novel",
+			"description": "Roleplay scene with character entities and tool-driven NPCs.",
+			"path": "Samples~/VisualNovelSample"
+		},
+		{
+			"displayName": "NPC",
+			"description": "Demonstrates agentic NPC.",
+			"path": "Samples~/NPCSample"
+		}
+	],
+	"author": {
+		"name": "blfooz",
+		"email": "blfooz17@gmail.com",
+		"url": "https://github.com/blfooz"
+	},
+	"changelogUrl": "https://github.com/blfooz/com.blfooz.contextmanagement/blob/main/CHANGELOG.md",
+	"documentationUrl": "https://github.com/blfooz/com.blfooz.contextmanagement/tree/main/Documentation~",
+	"licensesUrl": "https://github.com/blfooz/com.blfooz.contextmanagement/blob/main/LICENSE.md"
+}

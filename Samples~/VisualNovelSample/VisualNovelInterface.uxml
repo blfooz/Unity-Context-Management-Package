@@ -1,0 +1,37 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="DialogueBubbleTemplate" src="project://database/Assets/Samples/Context%20Management/0.1.0/VisualNovel/VNDialogueBubbleTemplate.uxml?fileID=9197481963319205126&amp;guid=54fe7c0e34a7ced409ed73d168da129f&amp;type=3#VNDialogueBubbleTemplate"/>
+    <ui:Template name="VNOption" src="project://database/Assets/Samples/Context%20Management/0.1.0/VisualNovel/VNOption.uxml?fileID=9197481963319205126&amp;guid=0b03a3201ea212c45b934350aa85c8db&amp;type=3#VNOption"/>
+    <ui:VisualElement name="" style="flex-grow: 0; background-color: rgba(51, 51, 51, 0.75); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); flex-direction: row; height: auto;">
+        <ui:Label name="topBarLabel" text="Label" style="color: rgb(255, 255, 255); font-size: 32px; border-left-width: 10px; border-top-width: 0; border-bottom-width: 5px; flex-grow: 1;"/>
+        <ui:Button text="History" name="historyButton" style="color: rgb(255, 255, 255); font-size: 24px; margin-left: auto; margin-right: 10px; align-self: center;"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="options" style="flex-grow: 1; align-items: center; justify-content: center;">
+        <ui:Instance template="VNOption" name="demoOption" style="width: 80%;"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="" style="flex-grow: 0; background-color: rgba(51, 51, 51, 0.75); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); flex-direction: column; height: 40%;">
+        <ui:Label text="Label" name="name" style="color: rgb(255, 255, 255); font-size: 32px; border-left-width: 10px; border-top-width: 5px;"/>
+        <ui:Label text="Label" name="dialogue" style="color: rgb(255, 255, 255); font-size: 32px; -unity-text-align: middle-center; flex-grow: 1; white-space: normal;"/>
+        <ui:VisualElement style="flex-grow: 0; flex-direction: row; flex-shrink: 0;">
+            <ui:TextField name="input" value="" style="font-size: 40px; flex-grow: 1; height: 80px; flex-shrink: 1; white-space: normal;">
+                <Bindings>
+                    <ui:DataBinding property="value" data-source-path="input" binding-mode="TwoWay"/>
+                    <ui:DataBinding property="enabledSelf" data-source-path="enableInput" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:TextField>
+            <ui:Button text="&gt;" name="sendButton" style="aspect-ratio: 1;">
+                <Bindings>
+                    <ui:DataBinding property="enabledSelf" data-source-path="enableInput" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:Button>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="historyPanel" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(60, 60, 60, 0.94); flex-direction: column; display: none;">
+        <ui:VisualElement style="flex-grow: 0; flex-direction: row; align-items: center; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px; background-color: rgb(37, 37, 37);">
+            <ui:Label text="Dialogue History" style="color: rgb(255, 255, 255); font-size: 32px; flex-grow: 1; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;"/>
+            <ui:Button text="Close" name="closeHistoryButton" style="color: rgb(255, 255, 255); font-size: 20px;"/>
+        </ui:VisualElement>
+        <ui:ScrollView name="historyScroll" style="flex-grow: 1; margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 10px;">
+            <ui:Instance template="DialogueBubbleTemplate" name="demoDialogueBubble"/>
+        </ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>

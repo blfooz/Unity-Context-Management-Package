@@ -1,0 +1,16 @@
+{
+    "name": "Blfooz.Contextmanagement.Samples.VisualNovel",
+    "references": [
+        "Unity.InputSystem",
+        "Blfooz.Contextmanagement"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

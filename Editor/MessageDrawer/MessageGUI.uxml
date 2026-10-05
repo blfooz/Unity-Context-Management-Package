@@ -1,0 +1,41 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="" style="flex-grow: 0; padding: 4px; border-width: 1px; border-color: rgba(80, 80, 80, 255); border-radius: 4px; border-left-color: rgba(80, 80, 80, 0); border-right-color: rgba(80, 80, 80, 0); border-top-color: rgba(80, 80, 80, 0); border-bottom-color: rgba(80, 80, 80, 0); background-color: rgb(65, 65, 65);">
+        <ui:VisualElement style="flex-grow: 0; flex-direction: row; align-items: center;">
+            <ui:DropdownField label="Role" name="role" style="flex-grow: 1; flex-shrink: 1; color: rgb(142, 142, 142);"/>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1;">
+            <ui:Label text="time stamps" name="timestamps" style="font-size: 10px; color: rgb(142, 142, 142);">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="TimestampsString" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:Label>
+            <ui:Label text="token usage" name="tokenUage" style="font-size: 10px; color: rgb(142, 142, 142);">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="TokenUsageString" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:Label>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; background-color: rgb(76, 76, 76); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; border-left-color: rgb(39, 39, 39); border-right-color: rgb(39, 39, 39); border-top-color: rgb(39, 39, 39); border-bottom-color: rgb(39, 39, 39);">
+            <ui:Label text="Pre Content" style="padding-left: 2px; color: rgb(142, 142, 142); white-space: normal;">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="PreContentString" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:Label>
+        </ui:VisualElement>
+        <ui:TextField multiline="true" placeholder-text="content" name="content" style="min-height: 100px;"/>
+        <ui:VisualElement enabled="true" style="display: flex; flex-direction: column; margin-top: 4px; padding: 4px; background-color: rgba(60, 50, 30, 255); border-radius: 3px; margin-bottom: 4px;">
+            <ui:Label text="Tool Calls:" style="-unity-font-style: bold; font-size: 11px; color: rgba(255, 200, 100, 255);"/>
+            <ui:VisualElement name="toolCallsList" style="flex-direction: column;"/>
+            <Bindings>
+                <ui:DataBinding property="style.display" data-source-path="ShowToolCalls" binding-mode="ToTarget"/>
+            </Bindings>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-left-color: rgb(80, 80, 80); border-right-color: rgb(80, 80, 80); border-top-color: rgb(80, 80, 80); border-bottom-color: rgb(80, 80, 80);">
+            <ui:Label text="Summary Message" style="color: rgb(142, 142, 142);"/>
+            <ui:ScrollView name="archivedMessages"/>
+            <Bindings>
+                <ui:DataBinding property="style.display" data-source-path="ShowSummary" binding-mode="ToTarget"/>
+            </Bindings>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
