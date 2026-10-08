@@ -17,9 +17,9 @@ Install from the Unity Package Manager:
 
 1. Open **Window ▸ Package Manager**.
 2. Click the **+** button and choose **Add package from git URL…**.
-3. Paste `https://github.com/blfooz/com.blfooz.contextmanagement.git` and click **Add**.
+3. Paste `https://github.com/blfooz/Unity-Context-Management-Package.git` and click **Add**.
 
-The package is not on a public registry. It installs from that repository - private while the API settles, so an account with access is needed - or from a tarball produced with `npm pack` inside the package folder, through **Add package from tarball**.
+The package is not on a public registry. It installs from that repository, or from a tarball produced with `npm pack` inside the package folder, through **Add package from tarball**.
 
 ### Requirements
 
